@@ -14,6 +14,7 @@
 
 ### [ Installation ]
 - Download the resource and drop it to your resource folder.
+- Import the SQL file to your servers DB
 - Add ``start qb-skillz`` to your server.cfg
 
 ### [ How do I use it? ]
