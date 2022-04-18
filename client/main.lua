@@ -20,12 +20,6 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
 	end
 end)
 
-	--[[RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
-		for i, v in ipairs(Config.Skills) do
-		Config.Skills[i]["Current"] = 0
-		end
-		end)]]
-
 	Citizen.CreateThread(function()
 		while true do
 			Citizen.Wait(25000)
@@ -59,7 +53,3 @@ end)
 end)
 
 
-
-RegisterCommand('skills', function()
-	exports["qb-skillz"]:UpdateSkill("Stamina", 2)
-end)
