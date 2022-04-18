@@ -59,7 +59,7 @@ RefreshSkills = function()
     for type, value in pairs(Config.Skills) do
         if Config.Debug then
             print(type .. ": " .. value['Current'])
-        else
+        elseif Config.Debug and not Config.Skills[skill] then
             print("something went wrong")
         end
         if value["Stat"] then
