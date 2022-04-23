@@ -1,5 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
+
 FetchSkills = function()
     QBCore.Functions.TriggerCallback("skillsystem:fetchStatus", function(data)
 		if data then
@@ -69,6 +70,19 @@ RefreshSkills = function()
         end
     end
 end
+
+exports('CheckSkill', function(skill, val, hasskill)
+    if Config.Skills[skill] then
+        if Config.Skills[skill]["Current"] >= tonumber(val) then
+            hasskill(true)
+        else
+            hasskill(false)
+        end
+    else
+        print("Skill " .. skill .. " doesn't exist")
+        hasskill(false)
+    end
+end)
 
 MessageBox = function(text, alpha)
     if alpha > 255 then

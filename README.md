@@ -26,6 +26,23 @@
 ```lua
     exports["qb-skillz"]:UpdateSkill("Stamina", 2)
 ```
+
+- An export to check to see if a skill is equal or greater than a value 
+```lua
+    exports["qb-skillz"]:CheckSkill(skill, val)
+```
+
+so if you want to check if your lung capacity is 50 or over you would do 
+```lua
+exports["qb-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
+    if hasskill then
+        print("Lung Capacity 50 or over")
+    else
+        print("Lung Capacity lover than 50")
+    end
+end)
+```
+
 - There is also an export to get the current skill if you were to do something from another script
 ```lua
     exports["qb-skillz"]:GetCurrentSkill(skill)

@@ -20,7 +20,7 @@ AddEventHandler('skillsystem:update', function (data)
      local Player = QBCore.Functions.GetPlayer(source)
      --print(data)
 
-	exports.oxmysql:execute('UPDATE players SET skills = @skills WHERE citizenid = @citizenid', {
+	 MySQL.query('UPDATE players SET skills = @skills WHERE citizenid = @citizenid', {
 		['@skills'] = data,
 		['@citizenid'] = Player.PlayerData.citizenid
 	})
