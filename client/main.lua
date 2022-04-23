@@ -20,6 +20,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
 	end
 end)
 
+
 	Citizen.CreateThread(function()
 		while true do
 			Citizen.Wait(25000)
@@ -51,5 +52,3 @@ end)
 		end
 	end)
 end)
-
-
