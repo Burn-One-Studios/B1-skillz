@@ -1,6 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-
 FetchSkills = function()
     QBCore.Functions.TriggerCallback("skillsystem:fetchStatus", function(data)
 		if data then

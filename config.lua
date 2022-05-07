@@ -7,6 +7,8 @@ Config.NotifyType = 'qb' -- notification type: '3d' for 3d Messagebox, 'qb' for 
 
 Config.Debug = false -- debug print
 
+Config.Skillmenu = "skills" -- skillmenu command
+
 Config.Skills = {
     ["Stamina"] = {
         ["Current"] = 0, -- Default value 
