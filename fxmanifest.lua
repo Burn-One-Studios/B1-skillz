@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 description 'QB-Skillz'
-version '1.5.3'
+version '1.5.4'
 
 shared_script 'config.lua'
 
