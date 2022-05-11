@@ -6,11 +6,13 @@ local function createSkillMenu()
         isHeader = true,
         header = 'Skills',
         isMenuHeader = true,
+        icon = 'fas fa-chart-simple'
     }
     for k,v in pairs(Config.Skills) do
         skillMenu[#skillMenu + 1] = {
             header = ''.. k .. '',
             txt = ''..v['Current']..'%',
+            icon = ''..v['icon']..'',
             params = {
                 args = {
                     v

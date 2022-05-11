@@ -52,3 +52,11 @@ end)
 		end
 	end)
 end)
+
+
+AddEventHandler('onResourceStart', function(resource)
+   if resource == GetCurrentResourceName() then
+	  Wait(100)
+	  FetchSkills()
+   end
+end)
