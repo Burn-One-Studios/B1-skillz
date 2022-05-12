@@ -35,7 +35,7 @@ end)
 				UpdateSkill("Lung Capacity", 0.5)
 			elseif IsPedShooting(ped) then
 				UpdateSkill("Shooting", 0.1)
-			elseif DoesEntityExist(vehicle) then
+			elseif DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == ped then
 				local speed = GetEntitySpeed(vehicle) * 3.6
 				if GetVehicleClass(vehicle) == 8 or GetVehicleClass(vehicle) == 13 and speed >= 5 then
 					local rotation = GetEntityRotation(vehicle)
