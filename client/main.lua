@@ -1,3 +1,5 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 	Citizen.CreateThread(function()
 		FetchSkills()
@@ -26,7 +28,9 @@ end)
 			Citizen.Wait(25000)
 			local ped = PlayerPedId()
 			local vehicle = GetVehiclePedIsUsing(ped)
-
+			local isDead = QBCore.Functions.GetPlayerData().metadata["isdead"]
+			local islaststand = QBCore.Functions.GetPlayerData().metadata["islaststand"]
+			if LocalPlayer.state.isLoggedIn and not isDead and not islaststand then
 			if IsPedRunning(ped) then
 				UpdateSkill("Stamina", 0.1)
 			elseif IsPedInMeleeCombat(ped) then
@@ -35,7 +39,7 @@ end)
 				UpdateSkill("Lung Capacity", 0.5)
 			elseif IsPedShooting(ped) then
 				UpdateSkill("Shooting", 0.1)
-			elseif DoesEntityExist(vehicle) then
+			elseif DoesEntityExist(vehicle) and GetPedInVehicleSeat(vehicle, -1) == ped then
 				local speed = GetEntitySpeed(vehicle) * 3.6
 				if GetVehicleClass(vehicle) == 8 or GetVehicleClass(vehicle) == 13 and speed >= 5 then
 					local rotation = GetEntityRotation(vehicle)
@@ -49,7 +53,8 @@ end)
 					UpdateSkill("Driving", 0.1)
 				end
 			end
-		end
+			end
+end
 	end)
 end)
 
