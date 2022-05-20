@@ -1,5 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-
+-- Do not touch this file unless you know what you are doing!
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 	Citizen.CreateThread(function()
 		FetchSkills()
@@ -22,7 +22,6 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
 	end
 end)
 
-
 	Citizen.CreateThread(function()
 		while true do
 			Citizen.Wait(25000)
@@ -34,7 +33,10 @@ end)
 			if IsPedRunning(ped) then
 				UpdateSkill("Stamina", 0.1)
 			elseif IsPedInMeleeCombat(ped) then
+				local isTargetting, targetEntity = GetPlayerTargetEntity(PlayerId())
+				if isTargetting and not IsEntityDead(targetEntity) and GetMeleeTargetForPed(ped) ~= 0 then
 				UpdateSkill("Strength", 0.2)
+				end
 			elseif IsPedSwimmingUnderWater(ped) then
 				UpdateSkill("Lung Capacity", 0.5)
 			elseif IsPedShooting(ped) then
