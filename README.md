@@ -49,12 +49,13 @@ end)
 ```
 ### [ Previews ]
 
+<h3 align='center'>Preview of the main qb-skillz branch</h3>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillzmain.png"/>
 </p>
-# <h3 align='center'>Preview of the main qb-skillz branch</h3>
 
+
+<h3 align='center'>Preview of the "custom" qb-skillz branch THIS IS NOT OFFICALLY SUPPORTED</h3>
 <p align="center">
     <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillzcustom.png"/>
 </p>
-# <h3 align='center'>Preview of the "custom" qb-skillz branch THIS IS NOT OFFICALLY SUPPORTED</h3>
