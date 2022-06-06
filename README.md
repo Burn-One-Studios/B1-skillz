@@ -27,12 +27,12 @@
     exports["qb-skillz"]:UpdateSkill("Stamina", 2)
 ```
 
-- An export to check to see if a skill is equal or greater than a value 
+- An export to check to see if a skill is equal or greater than a value
 ```lua
     exports["qb-skillz"]:CheckSkill(skill, val)
 ```
 
-so if you want to check if your lung capacity is 50 or over you would do 
+so if you want to check if your lung capacity is 50 or over you would do
 ```lua
 exports["qb-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
     if hasskill then
@@ -47,3 +47,14 @@ end)
 ```lua
     exports["qb-skillz"]:GetCurrentSkill(skill)
 ```
+### [ Previews ]
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillzmain.png"/>
+</p>
+# <h3 align='center'>Preview of the main qb-skillz branch</h3>
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillzcustom.png"/>
+</p>
+# <h3 align='center'>Preview of the "custom" qb-skillz branch THIS IS NOT OFFICALLY SUPPORTED</h3>
