@@ -14,26 +14,26 @@
 ### [ Installation ]
 - Download the resource and drop it to your resource folder.
 - Import the SQL file to your servers DB
-- Add ``start qb-skillz`` to your server.cfg
+- Add ``start B1-skillz`` to your server.cfg
 
 ### [ How do I use it? ]
 - To Update a skill you do following:
 ```lua
-    exports["qb-skillz"]:UpdateSkill(skill, amount)
+    exports["B1-skillz"]:UpdateSkill(skill, amount)
 ```
   so if you were to add 2% to Stamina you do
 ```lua
-    exports["qb-skillz"]:UpdateSkill("Stamina", 2)
+    exports["B1-skillz"]:UpdateSkill("Stamina", 2)
 ```
 
 - An export to check to see if a skill is equal or greater than a value
 ```lua
-    exports["qb-skillz"]:CheckSkill(skill, val)
+    exports["B1-skillz"]:CheckSkill(skill, val)
 ```
 
 so if you want to check if your lung capacity is 50 or over you would do
 ```lua
-exports["qb-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
+exports["B1-skillz"]:CheckSkill("Lung Capacity", 50, function(hasskill)
     if hasskill then
         print("Lung Capacity 50 or over")
     else
@@ -44,7 +44,7 @@ end)
 
 - There is also an export to get the current skill if you were to do something from another script
 ```lua
-    exports["qb-skillz"]:GetCurrentSkill(skill)
+    exports["B1-skillz"]:GetCurrentSkill(skill)
 ```
 ### [ Previews ]
 
