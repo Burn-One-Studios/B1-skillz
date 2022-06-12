@@ -1,5 +1,4 @@
-## <h3 align='center'> Moved to a new repo so issues can be opened old version can be found  <a href='https://github.com/Kingsage311/qb-skillz-old'>here</a></h3>
-## <h3 align='center'>For more support or to see more of my resources you can join my <a href='https://discord.gg/aCFPpcKEGk'>discord</a></h3>
+## <h3 align='center'>For more support or to see more of our resources you can join the Burn One Studios Discord <a href='https://discord.gg/yKyN9Q3Vmy'>discord</a></h3>
 
 ### [ What is this? ]
 - A skillsystem based on GTA's existing skills.
