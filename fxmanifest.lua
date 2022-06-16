@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 description 'B1-Skillz'
-version '1.3.0'
+version '1.3.5'
 
 shared_script 'config.lua'
 
