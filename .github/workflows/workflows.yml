@@ -1,20 +1,13 @@
-name: DiscordWebhook
-
+name: Discord Webhook
 on: [push]
-
 jobs:
-  build:
+  Discord_notification:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-
-    - name: Send to Discord via Action
-      uses: nebularg/actions-discord-webhook@master
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Run Discord Webhook
+      uses: Mist3r-Robot/classic-discord-webhook@main
       with:
-        webhook_url: ${{ secrets.B1_SEC }}
-      if: always()
-
-    - name: Dump env
-      if: always()
-      run: set -o posix; set
+        id: ${{ secrets.B1_ID }}
+        token: ${{ secrets.B1_TOKEN }}
