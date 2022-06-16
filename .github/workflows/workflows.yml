@@ -7,7 +7,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v1
     - name: Run Discord Webhook
-      uses: Mist3r-Robot/classic-discord-webhook@main
+      uses: Kingsage311/classic-discord-webhook@main
       with:
         id: ${{ secrets.B1_ID }}
         token: ${{ secrets.B1_TOKEN }}
