@@ -9,6 +9,8 @@ Config.Debug = false -- debug print
 
 Config.Skillmenu = "skills" -- skillmenu command
 
+Config.ShootingSkillChance = 33 -- higher this is the more the skill will update max is 100 lowest is 1
+
 Config.Skills = {
     ["Stamina"] = {
         ["Current"] = 0, -- Default value 
@@ -51,4 +53,46 @@ Config.Skills = {
         ["Stat"] = "MP0_WHEELIE_ABILITY",
         ['icon'] = 'fas fa-wheelchair',
     }
+}
+
+Config.BlackListedWeapons = { -- Blacklisted Weapons that will not increase players shooting skill
+    `weapon_petrolcan`,
+    `weapon_hazardcan`,
+    `weapon_fireextinguisher`,
+    `weapon_fertilizercan`,
+    `weapon_flare`,
+    `weapon_smokegrenade`,
+    `weapon_ball`,
+    `weapon_pipebomb`,
+    `weapon_snowball`,
+    `weapon_proxmine`,
+    `weapon_stickybomb`,
+    `weapon_molotov`,
+    `weapon_bzgas`,
+    `weapon_grenade`,
+    `weapon_stone_hatchet`,
+    `weapon_bread`,
+    `weapon_handcuffs`,
+    `weapon_garbagebag`,
+    `weapon_briefcase_02`,
+    `weapon_briefcase`,
+    `weapon_poolcue`,
+    `weapon_battleaxe`,
+    `weapon_wrench`,
+    `weapon_nightstick`,
+    `weapon_switchblade`,
+    `weapon_machete`,
+    `weapon_knife`,
+    `weapon_knuckle`,
+    `weapon_hatchet`,
+    `weapon_hammer`,
+    `weapon_golfclub`,
+    `weapon_flashlight`,
+    `weapon_crowbar`,
+    `weapon_bottle`,
+    `weapon_bat`,
+    `weapon_dagger`,
+    `weapon_unarmed`,
+    `weapon_flashlight`,
+    `weapon_stungun`,
 }
