@@ -78,7 +78,7 @@ CreateThread(function() -- Shooting
             if weapon ~= `WEAPON_UNARMED` then
                 if IsPedShooting(ped) and not IsBlacklisteddWeapon(weapon) then
                     if math.random(1,100) < Config.ShootingSkillChance then
-                        UpdateSkill("Shooting", 0.1)
+                        UpdateSkill("Shooting", Config.ShootingSkillUpAmount)
                     end
                 end
             else

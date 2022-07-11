@@ -11,6 +11,8 @@ Config.Skillmenu = "skills" -- skillmenu command
 
 Config.ShootingSkillChance = 33 -- higher this is the more the skill will update max is 100 lowest is 1
 
+Config.ShootingSkillUpAmount = 0.1 --the amount the skill goes up when triggered
+
 Config.Skills = {
     ["Stamina"] = {
         ["Current"] = 0, -- Default value 
