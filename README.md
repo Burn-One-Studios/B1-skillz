@@ -46,6 +46,15 @@ end)
 ```lua
     exports["B1-skillz"]:GetCurrentSkill(skill)
 ```
+
+so if we wanted to print out the `Current` of the "Shooting" it will look like this
+```lua
+CreateThread(function()
+local shootingskill = exports["B1-skillz"]:GetCurrentSkill("Shooting")
+QBCore.Debug(shootingskill) --prints the table to the server console
+print(shootingskill.Current) --prints "Current" of that skill to the clients console
+end)
+```
 ### [ Previews ]
 
 <h3 align='center'>Preview of the main qb-skillz branch</h3>
