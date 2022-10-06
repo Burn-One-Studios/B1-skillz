@@ -43,11 +43,11 @@ UpdateSkill = function(skill, amount)
     if Config.Notifications and  tonumber(amount) > 0 then
         if Config.NotifyType == "3d" then
             Notification("~g~+" .. amount .. "% ~s~" .. skill)
-    elseif Config.NotifyType == 'qb' then
-        QBCore.Functions.Notify("+" .. amount .. "% " .. skill)
-    elseif Config.NotifyType == "tnj" then
-        exports['tnj-notify']:Notify("+" .. amount .. "% " .. skill, "primary", 1500)
-    end
+        elseif Config.NotifyType == 'qb' then
+            QBCore.Functions.Notify("+" .. amount .. "% " .. skill)
+        elseif Config.NotifyType == "tnj" then
+            exports['tnj-notify']:Notify("+" .. amount .. "% " .. skill, "primary", 1500)
+        end
     end
 	TriggerServerEvent("skillsystem:update", json.encode(Config.Skills))
 end
@@ -111,7 +111,7 @@ Notification = function(message)
     local alpha = 185
 
     for time = 1, 250 do
-        Citizen.Wait(1)
+        Wait(1)
 
         if time >= 150 then
             alpha = alpha - 2

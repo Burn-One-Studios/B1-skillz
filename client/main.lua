@@ -1,12 +1,12 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 -- Do not touch this file unless you know what you are doing!
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-	Citizen.CreateThread(function()
+	CreateThread(function()
 		FetchSkills()
 
 		while true do
 			local seconds = Config.UpdateFrequency * 1000
-			Citizen.Wait(seconds)
+			Wait(seconds)
 
 			for skill, value in pairs(Config.Skills) do
 				UpdateSkill(skill, value["RemoveAmount"])
@@ -22,9 +22,9 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 		end
 	end)
 
-	Citizen.CreateThread(function()
+	CreateThread(function()
 		while true do
-			Citizen.Wait(25000)
+			Wait(25000)
 			local ped = PlayerPedId()
 			local vehicle = GetVehiclePedIsUsing(ped)
 			local isDead = QBCore.Functions.GetPlayerData().metadata["isdead"]
