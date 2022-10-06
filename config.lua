@@ -2,12 +2,14 @@ Config = {}
 
 Config.UpdateFrequency = 300 -- seconds interval between removing values
 
-Config.Notifications = true -- notification when skill is added
+Config.Notifications = false -- notification when skill is added
 Config.NotifyType = 'qb' -- notification type: '3d' for 3d Messagebox, 'qb' for QBCore notification, 'tnj' for tnj notification
 
 Config.Debug = false -- debug print
 
 Config.Skillmenu = "skills" -- skillmenu command
+
+Config.UI = true -- set to false for qb-menu
 
 Config.ShootingSkillChance = 33 -- higher this is the more the skill will update max is 100 lowest is 1
 
