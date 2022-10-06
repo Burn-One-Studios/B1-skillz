@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 FetchSkills = function()
     QBCore.Functions.TriggerCallback("skillsystem:fetchStatus", function(data)
-		if data then
+        if data then
             for status, value in pairs(data) do
                 if Config.Skills[status] then
                     Config.Skills[status]["Current"] = value["Current"]
@@ -10,7 +10,7 @@ FetchSkills = function()
                     print("Removing: " .. status) 
                 end
             end
-	end
+    end
         RefreshSkills()
     end)
 end
@@ -37,7 +37,7 @@ UpdateSkill = function(skill, amount)
     else
         Config.Skills[skill]["Current"] = SkillAmount + tonumber(amount)
     end
-    
+
     RefreshSkills()
 
     if Config.Notifications and  tonumber(amount) > 0 then
@@ -49,12 +49,12 @@ UpdateSkill = function(skill, amount)
             exports['tnj-notify']:Notify("+" .. amount .. "% " .. skill, "primary", 1500)
         end
     end
-	TriggerServerEvent("skillsystem:update", json.encode(Config.Skills))
+    TriggerServerEvent("skillsystem:update", json.encode(Config.Skills))
 end
 
 
-function round(num) 
-    return math.floor(num+.5) 
+function round(num)
+    return math.floor(num+.5)
 end
 
 RefreshSkills = function()

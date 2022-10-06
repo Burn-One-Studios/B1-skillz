@@ -1,16 +1,16 @@
 -- sort keys into an array then iterate the sorted array and return key & value
 local function pairsByKeys (t, f)
-	local a = {}
-	for n in pairs(t) do table.insert(a, n) end
-	table.sort(a, f)
-	local i = 0      -- iterator variable
-	local iter = function ()   -- iterator function
-		i = i + 1
-		if a[i] == nil then return nil
-		else return a[i], t[a[i]]
-		end
-	end
-	return iter
+    local a = {}
+    for n in pairs(t) do table.insert(a, n) end
+    table.sort(a, f)
+    local i = 0      -- iterator variable
+    local iter = function ()   -- iterator function
+        i = i + 1
+        if a[i] == nil then return nil
+        else return a[i], t[a[i]]
+        end
+    end
+    return iter
 end
 
 local function createSkillMenu()
@@ -45,11 +45,11 @@ local function createSkillMenu()
                     }
                 }
             }
-        end	
+        end
         exports['qb-menu']:openMenu(skillMenu)
     end
 end
- 
+
 RegisterNUICallback('close', function()
     SendNUIMessage({action = "close"})
     SetNuiFocus(false)
