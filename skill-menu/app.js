@@ -10,6 +10,7 @@ $(function () {
       });
     } else {
       $('body').css("display", "none");
+      $(".skills").empty()
     }
   });
 
