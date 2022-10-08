@@ -15,10 +15,8 @@ QBCore.Functions.CreateCallback('skillsystem:fetchStatus', function(source, cb)
 	end
  end)
  
-RegisterServerEvent('skillsystem:update')
-AddEventHandler('skillsystem:update', function (data)
+RegisterServerEvent('skillsystem:update', function (data)
      local Player = QBCore.Functions.GetPlayer(source)
-     --print(data)
 
 	 MySQL.query('UPDATE players SET skills = @skills WHERE citizenid = @citizenid', {
 		['@skills'] = data,

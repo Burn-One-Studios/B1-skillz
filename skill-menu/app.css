@@ -1,0 +1,49 @@
+body,
+html {
+  background-color: transparent;
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.skill-overlay {
+  margin-top: 100px;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  width: 760px;
+}
+
+.skill-overlay > .title {
+  padding: 10px 20px;
+  background-color: #323232;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.skills-wrapper {
+  padding: 18px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.skill > .title {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.progress {
+  background-color: #505050;
+}
+
+.progress .fill {
+  background-color: #536095;
+}
