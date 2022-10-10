@@ -1,10 +1,10 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+ESX = exports["es_extended"]:getSharedObject()
 
-QBCore.Functions.CreateCallback('skillsystem:fetchStatus', function(source, cb)
-	local Player = QBCore.Functions.GetPlayer(source)
+ESX.RegisterServerCallback('skillsystem:fetchStatus', function(source, cb)
+	local Player = ESX.GetPlayerFromId(source)
  
 	if Player then
-		local status = MySQL.scalar.await('SELECT skills FROM players WHERE citizenid = ?', {Player.PlayerData.citizenid})
+		local status = MySQL.scalar.await('SELECT skills FROM users WHERE identifier = ?', {Player.identifier})
 		if status ~= nil then
 			cb(json.decode(status))
 		else
@@ -14,12 +14,12 @@ QBCore.Functions.CreateCallback('skillsystem:fetchStatus', function(source, cb)
 		cb()
 	end
  end)
- 
-RegisterServerEvent('skillsystem:update', function (data)
-     local Player = QBCore.Functions.GetPlayer(source)
 
-	 MySQL.query('UPDATE players SET skills = @skills WHERE citizenid = @citizenid', {
+RegisterServerEvent('skillsystem:update', function (data)
+     local Player = ESX.GetPlayerFromId(source)
+
+	 MySQL.query('UPDATE users SET skills = @skills WHERE identifier = @identifier', {
 		['@skills'] = data,
-		['@citizenid'] = Player.PlayerData.citizenid
+		['@identifier'] = Player.identifier
 	})
 end)

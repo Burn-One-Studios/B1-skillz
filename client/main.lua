@@ -1,6 +1,7 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+ESX = exports["es_extended"]:getSharedObject()
 -- Do not touch this file unless you know what you are doing!
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function()
     CreateThread(function()
         FetchSkills()
 
@@ -16,7 +17,8 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
         end
     end)
 
-    RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
+    RegisterNetEvent('esx:onPlayerLogout')
+    AddEventHandler('esx:onPlayerLogout', function()
         for skill, value in pairs(Config.Skills) do
             Config.Skills[skill]["Current"] = 0
         end
@@ -27,9 +29,8 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
             Wait(25000)
             local ped = PlayerPedId()
             local vehicle = GetVehiclePedIsUsing(ped)
-            local isDead = QBCore.Functions.GetPlayerData().metadata["isdead"]
-            local islaststand = QBCore.Functions.GetPlayerData().metadata["islaststand"]
-            if LocalPlayer.state.isLoggedIn and not isDead and not islaststand then
+            local isDead = ESX.PlayerData.dead
+            if ESX.IsPlayerLoaded and not isDead then
                 if IsPedRunning(ped) then
                     UpdateSkill("Stamina", 0.1)
                 elseif IsPedInMeleeCombat(ped) then
@@ -72,7 +73,7 @@ end
 
 CreateThread(function() -- Shooting
     while true do
-        if LocalPlayer.state.isLoggedIn then
+        if ESX.IsPlayerLoaded then
             local ped = PlayerPedId()
             local weapon = GetSelectedPedWeapon(ped)
             if weapon ~= `WEAPON_UNARMED` then

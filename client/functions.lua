@@ -1,7 +1,7 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+ESX = exports["es_extended"]:getSharedObject()
 
 FetchSkills = function()
-    QBCore.Functions.TriggerCallback("skillsystem:fetchStatus", function(data)
+    ESX.TriggerServerCallback("skillsystem:fetchStatus", function(data)
         if data then
             for status, value in pairs(data) do
                 if Config.Skills[status] then
@@ -43,10 +43,8 @@ UpdateSkill = function(skill, amount)
     if Config.Notifications and  tonumber(amount) > 0 then
         if Config.NotifyType == "3d" then
             Notification("~g~+" .. amount .. "% ~s~" .. skill)
-        elseif Config.NotifyType == 'qb' then
-            QBCore.Functions.Notify("+" .. amount .. "% " .. skill)
-        elseif Config.NotifyType == "tnj" then
-            exports['tnj-notify']:Notify("+" .. amount .. "% " .. skill, "primary", 1500)
+        elseif Config.NotifyType == 'esx' then
+            ESX.ShowNotification("+" .. amount .. "% " .. skill)
         end
     end
     TriggerServerEvent("skillsystem:update", json.encode(Config.Skills))

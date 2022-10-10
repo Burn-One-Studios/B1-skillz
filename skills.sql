@@ -1,2 +1,2 @@
-ALTER table players
+ALTER table users
 	ADD COLUMN `skills` LONGTEXT;
