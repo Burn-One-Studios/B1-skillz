@@ -1,3 +1,5 @@
+
+## <h3 align='center'>This is the QBCore Branch</h3>
 ## <h3 align='center'>For more support or to see more of our resources you can join the Burn One Studios Discord <a href='https://discord.gg/yKyN9Q3Vmy'>discord</a></h3>
 
 ### [ What is this? ]
@@ -57,13 +59,7 @@ end)
 ```
 ### [ Previews ]
 
-<h3 align='center'>Preview of the main qb-skillz branch</h3>
+<h3 align='center'>Preview of skills menu</h3>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillzmain.png"/>
-</p>
-
-
-<h3 align='center'>Preview of the "custom" qb-skillz branch THIS IS NOT OFFICALLY SUPPORTED</h3>
-<p align="center">
-    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillzcustom.png"/>
+    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillnuiprev.png"/>
 </p>
