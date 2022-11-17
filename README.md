@@ -61,5 +61,5 @@ end)
 
 <h3 align='center'>Preview of skills menu</h3>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillnuiprev.png"/>
+    <img src="https://raw.githubusercontent.com/Kingsage311/Kingsage311/main/assets/skillmenuprev.png"/>
 </p>
