@@ -16,7 +16,7 @@ $(function () {
 
   function appendSkillNode(skill) {
     const node = $(`<div class="col-6 skill">
-    <div class="title">${skill.name}</div>
+    <div class="title"><i class="${skill.icon}"></i> ${skill.name}</div>
     <div class="progress" data-skill="${skill.name}"><div class="fill"></div></div>
   </div>`);
 
