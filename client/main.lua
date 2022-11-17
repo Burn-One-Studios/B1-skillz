@@ -24,7 +24,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 
     CreateThread(function()
         while true do
-            Wait(25000)
+            Wait(math.random(4000,8000))
             local ped = PlayerPedId()
             local vehicle = GetVehiclePedIsUsing(ped)
             local isDead = QBCore.Functions.GetPlayerData().metadata["isdead"]
