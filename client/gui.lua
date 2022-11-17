@@ -19,6 +19,7 @@ local function createSkillMenu()
         for k,v in pairsByKeys(Config.Skills) do
             skillMenu[#skillMenu + 1] = {
                     name = k,
+                    icon = v['icon'],
                     level = v['Current']
             }
         end
