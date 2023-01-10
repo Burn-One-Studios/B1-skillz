@@ -40,7 +40,7 @@ UpdateSkill = function(skill, amount)
 
     RefreshSkills()
 
-    if Config.Notifications and  tonumber(amount) > 0 then
+    if Config.Notifications and  tonumber(amount) > 1 then
         if Config.NotifyType == "3d" then
             Notification("~g~+" .. amount .. "% ~s~" .. skill)
         elseif Config.NotifyType == 'qb' then
